@@ -1,9 +1,12 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo } from 'react'; 
+
 import api from '../../services/api';
+
 import camera from '../../assets/camera.svg';
+
 import './styles.css';
 
-export default function New( {history}){
+export default function New({ history }){
     const [thumbnail, setThumbnail] = useState(null);
     const [company, setCompany] = useState('');
     const [techs, setTechs] = useState('');
@@ -15,10 +18,11 @@ export default function New( {history}){
     
    async function handleSubmit(event){
     event.preventDefault();
+
     const data = new FormData();
     const user_id = localStorage.getItem('user');
 
-    data.append('thumbmail', thumbnail);
+    data.append('thumbnail', thumbnail);
     data.append('company', company);
     data.append('techs', techs);
     data.append('price', price);

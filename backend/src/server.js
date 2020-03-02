@@ -22,7 +22,7 @@ mongoose.connect('mongodb://adrian:adrian@oministack-shard-00-00-jir1a.mongodb.n
 //req.body = Acessar o corpo da requisição ( Criação e edição de registro)
 app.use(cors());
 app.use(express.json());
-app.use('/files', express.static(path.resolve(__dirname, '../', 'uploads')));
+app.use('/files', express.static(path.resolve(__dirname, '..', 'uploads')));
 app.use(routes);
 
 
